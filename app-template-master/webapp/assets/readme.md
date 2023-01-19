@@ -1,0 +1,1 @@
+Static small assets to be included in the app bundle

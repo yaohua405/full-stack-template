@@ -1,0 +1,27 @@
+type Note {
+  _id: ID!
+  _rev: String!
+  value: String!
+  access: String!
+}
+type Answer {
+  id: ID,
+  ok: Boolean,
+  rev: String,
+}
+type User {
+  name: String
+  photo: String
+}
+
+type Query {
+  note(_id: ID!): Note
+  notes: [Note!]!
+  user: User
+}
+
+type Mutation {
+  noteDelete(_id: ID!, _rev: String!): Answer!
+  notePut(value: String!, access: String, _id: ID, _rev: String): Note!
+  log(type: String!): String
+}

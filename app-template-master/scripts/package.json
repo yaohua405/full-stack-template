@@ -1,0 +1,19 @@
+{
+  "name": "scripts",
+  "description": "Custom Local Scripts",
+  "version": "0.0.2",
+  "bin": {
+    "env":"env-cli.js",
+    "s-clean": "clean-cli.js",
+    "s-compose": "compose.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "dotenv-expand": "^8.0.2",
+    "shelljs": "^0.8.5",
+    "find": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/find": "*"
+  }
+}

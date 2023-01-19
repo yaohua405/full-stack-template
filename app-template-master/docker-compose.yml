@@ -1,0 +1,22 @@
+services:
+  server:
+    image: app
+    build: ./
+    depends_on:
+      - "db"
+    ports:
+      - "7376:9080"
+  db:
+    image: db
+    build: ./db/couchdb
+    restart: always
+    environment:
+      - COUCHDB_USER
+      - COUCHDB_PASSWORD
+    volumes:
+      - db:/opt/couchdb/data
+    ports:
+      - "7377:5984"
+
+volumes:
+  db:

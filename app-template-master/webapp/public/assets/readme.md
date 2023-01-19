@@ -1,0 +1,1 @@
+All your big assets go here, for browser cache

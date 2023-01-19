@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"@webapp/*": ["./webapp/*"],
+			"@server/*": ["./server/*"],
+			"@root/*": ["./*"],
+		},
+    "outDir": "./dist/",
+    "noImplicitAny": false,
+    "module": "ESNext",
+    "target": "ESNext",
+    "jsx": "react",
+		"strictNullChecks": true,
+    "allowJs": true,
+    "moduleResolution": "Node",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+  },
+	"exclude": ["*.graphql", "*.gql", "*.couchjs", "couch_design", "*couchjs-design*"],
+	"ts-node": {
+		"compilerOptions": {
+			"module": "commonjs"
+		}
+	}
+}
